@@ -75,12 +75,16 @@ def main():
     # Jedes Zeichen in der eingegebenen Zeichenkette wird nun
     # durchlaufen.
     for character in the_input:
+
         # Ist das Zeichen eine Ziffer,
         if character.isnumeric() or character=='.':
+
             # dann fügen wir das Zeichen der Zeichenkette `current_number` hinzu.
             current_number += character
+
         # Wenn das Zeichen keine Ziffer ist,
         else:
+
             # dann könnte es sein, dass das aktuelle Zeichen ein Operator ist.
             # Lassen wir also einen Versuch mit `calculate` laufen.
             # Sollte `calculate` damit nichts anfangen können, dann kommen hier
@@ -89,6 +93,7 @@ def main():
             # wieder Platz für eine neue Zahl.
             result, current_number = calculate(
                 operation, current_number, possible_operations, result)
+
             # Jeder gelesene Operator wird hier für den nächsten Durchlauf gespeichert.
             # Der Grund ist, dass jeder Operator erst angewendet darf, wenn die nachfolgende Zahl
             # gelesen wurde. Beispiele für 11+22-3
@@ -103,9 +108,13 @@ def main():
             if character in possible_operations:
                 operation = character
 
+    # Da wir nach dem letzte Zeichen in einer Kettenaufgabe keinen Operator mehr finden,
+    # bleibt dennoch der letzte übrig. Das holen wir nun nach und wenden nun den zuletzt
+    # gemerkten Operator mit den aktuellen Zahlen an. Alle Zahlen und Operatoren sind nun verarbeitet.
     final_result,current_number = calculate(operation, current_number,
                              possible_operations, result)
 
+    # Naja, zum Schluss noch ausgeben.
     print(final_result)
 
 
