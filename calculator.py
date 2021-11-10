@@ -29,7 +29,7 @@ def main():
                            '*': product,
                            '#': identity}
     for c in i:
-        if c.isnumeric and c not in possible_operations:
+        if c.isnumeric():
             current_number += c
         else:
             result, current_number = calculate(
