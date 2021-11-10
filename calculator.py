@@ -1,3 +1,9 @@
+"""
+ACHTUNG: Dieser Code ist nicht robust. Er kommt nur mit korrekten Kettenaufgaben zurecht.
+
+Kannst Du ihn vielleicht später robuster machen?
+"""
+
 def addition(a, b) -> float:
     """
     Diese Funktion addiert die Zahlen a und b. 
