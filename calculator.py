@@ -1,20 +1,35 @@
-def addition(a, b):
+def addition(a, b) -> float:
+    """
+    Diese Funktion addiert die Zahlen a und b. 
+    """
     return a+b
 
 
-def substraction(a, b):
+def substraction(a, b) -> float:
+    """
+    Diese Funktion subtrahiert Zahl b von a. 
+    """
     return a-b
 
 
-def product(a, b):
+def product(a, b) -> float:
+    """
+    Diese Funktion multipliziert die Zahlen a und b. 
+    """
     return a*b
 
 
-def division(a, b):
+def division(a, b) -> float:
+    """
+    Diese Funktion teilt die Zahl a durch b. 
+    """
     return a/b
 
 
-def identity(a, b):
+def identity(a, b) -> float:
+    """
+    Diese Funktion gibt einfach b zurück und ignoriert a.
+    """
     return b
 
 
